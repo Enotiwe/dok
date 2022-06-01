@@ -42,11 +42,11 @@ local nicks = {
 
 function main()
   -- Проверка на автозагрузку.
-	autoupdate("тут ссылка на ваш json", '['..string.upper(thisScript().name)..']: ', "тут ссылка на ваш сайт/url вашего скрипта на форуме (если нет, оставьте как в json)")
+	autoupdate("https://github.com/Enotiwe/dok/blob/main/-version.json", '['..string.upper(thisScript().name)..']: ', "https://github.com/Enotiwe/dok/blob/main/-version.json")
   -- Проверяем загружен ли sampfuncs и SAMP если не загружены - возвращаемся к началу
 	if not isSampfuncsLoaded() or not isSampLoaded() then return end
   -- Проверяем загружен ли SA-MP
-	while not isSampAvailable() do wait(0) end
+	while not isSampAvailable() do wait(100) end
   -- Сообщаем об загрузке скрипта
   stext('Скрипт успешно загружен!')
   -- Регистрируем команду
